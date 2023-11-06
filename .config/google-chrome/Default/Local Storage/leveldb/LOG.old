@@ -1,0 +1,6 @@
+2023/10/11-08:54:20.011 3 Reusing MANIFEST /home/achref/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2023/10/11-08:54:20.014 3 Recovering log #49
+2023/10/11-08:54:20.015 3 Reusing old log /home/achref/.config/google-chrome/Default/Local Storage/leveldb/000049.log 
+2023/10/11-09:01:04.787 3 Level-0 table #54: started
+2023/10/11-09:01:04.793 3 Level-0 table #54: 16407 bytes OK
+2023/10/11-09:01:04.800 3 Delete type=0 #49

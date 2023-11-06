@@ -1,0 +1,6 @@
+2022/12/31-14:28:45.605 31bb Creating DB /home/achref/.config/google-chrome/Default/IndexedDB/https_d17e5cadde64e8a26a0203602d90dd1f.safeframe.googlesyndication.com_0.indexeddb.leveldb since it was missing.
+2022/12/31-14:28:45.609 31bb Reusing MANIFEST /home/achref/.config/google-chrome/Default/IndexedDB/https_d17e5cadde64e8a26a0203602d90dd1f.safeframe.googlesyndication.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/12/31-14:29:23.814 31bb Level-0 table #5: started
+2022/12/31-14:29:23.818 31bb Level-0 table #5: 480 bytes OK
+2022/12/31-14:29:23.824 31bb Delete type=0 #3
+2022/12/31-14:29:23.825 31bb Manual compaction at level-0 from (begin) .. (end); will stop at (end)

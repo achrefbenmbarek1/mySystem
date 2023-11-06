@@ -1,0 +1,8 @@
+@types/node
+@types/express
+@types/dotenv
+@types/bcrypt
+@types/jsonwebtoken
+nodemon
+ts-node
+typescript

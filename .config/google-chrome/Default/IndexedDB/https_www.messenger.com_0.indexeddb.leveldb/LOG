@@ -1,0 +1,7 @@
+2022/12/31-14:21:17.223 2ebd Reusing MANIFEST /home/achref/.config/google-chrome/Default/IndexedDB/https_www.messenger.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/12/31-14:21:17.223 2ebd Recovering log #6
+2022/12/31-14:21:17.223 2ebd Reusing old log /home/achref/.config/google-chrome/Default/IndexedDB/https_www.messenger.com_0.indexeddb.leveldb/000006.log 
+2022/12/31-14:21:21.691 2f13 Level-0 table #11: started
+2022/12/31-14:21:21.694 2f13 Level-0 table #11: 501 bytes OK
+2022/12/31-14:21:21.697 2f13 Delete type=0 #6
+2022/12/31-14:21:21.697 2f13 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

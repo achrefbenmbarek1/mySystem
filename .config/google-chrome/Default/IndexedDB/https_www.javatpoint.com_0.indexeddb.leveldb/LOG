@@ -1,0 +1,6 @@
+2022/12/31-14:28:37.654 31bb Creating DB /home/achref/.config/google-chrome/Default/IndexedDB/https_www.javatpoint.com_0.indexeddb.leveldb since it was missing.
+2022/12/31-14:28:37.659 31bb Reusing MANIFEST /home/achref/.config/google-chrome/Default/IndexedDB/https_www.javatpoint.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/12/31-15:25:31.142 3af7 Level-0 table #5: started
+2022/12/31-15:25:31.144 3af7 Level-0 table #5: 1129 bytes OK
+2022/12/31-15:25:31.146 3af7 Delete type=0 #3
+2022/12/31-15:25:31.146 3af7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

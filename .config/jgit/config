@@ -1,0 +1,3 @@
+[filesystem "N/A|17.0.9|sharedArchUbuntu"]
+	timestampResolution = 178889 microseconds
+	minRacyThreshold = 0 nanoseconds

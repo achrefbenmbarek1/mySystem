@@ -1,0 +1,31 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="Android.RunAndroidSdkManager">
+      <i c="1" l="1687049754349" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="1" l="1687049791600" />
+    </e>
+    <e n="ProblemsView.QuickFixes">
+      <i c="1" l="1687049284879" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="1" l="1687049309462" />
+    </e>
+    <e n="WelcomeScreen.RunAndroidSdkManager">
+      <i c="3" l="1687040986562" />
+    </e>
+    <e n="WelcomeScreen.RunDeviceManager">
+      <i c="1" l="1687046880367" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$TrafficLightAction">
+      <i c="1" l="1687049275974" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$4">
+      <i c="2" l="1687049831755" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="1" l="1687049293699" />
+    </e>
+  </component>
+</application>

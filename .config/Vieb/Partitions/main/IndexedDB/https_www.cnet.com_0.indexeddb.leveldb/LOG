@@ -1,0 +1,6 @@
+2023/09/17-12:50:19.816 14a9 Creating DB /home/achref/.config/Vieb/Partitions/main/IndexedDB/https_www.cnet.com_0.indexeddb.leveldb since it was missing.
+2023/09/17-12:50:19.823 14a9 Reusing MANIFEST /home/achref/.config/Vieb/Partitions/main/IndexedDB/https_www.cnet.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/09/17-12:50:56.111 14aa Level-0 table #5: started
+2023/09/17-12:50:56.115 14aa Level-0 table #5: 1154 bytes OK
+2023/09/17-12:50:56.120 14aa Delete type=0 #3
+2023/09/17-12:50:56.120 14aa Manual compaction at level-0 from (begin) .. (end); will stop at (end)

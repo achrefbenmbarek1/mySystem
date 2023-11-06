@@ -1,0 +1,18 @@
+2022/12/31-14:10:46.814 2e54 Creating DB /home/achref/.config/google-chrome/Default/IndexedDB/https_www.messenger.com_0.indexeddb.leveldb since it was missing.
+2022/12/31-14:10:46.823 2e54 Reusing MANIFEST /home/achref/.config/google-chrome/Default/IndexedDB/https_www.messenger.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/12/31-14:10:47.040 2e56 Level-0 table #5: started
+2022/12/31-14:10:47.042 2e56 Level-0 table #5: 539 bytes OK
+2022/12/31-14:10:47.044 2e56 Delete type=0 #3
+2022/12/31-14:10:47.045 2e56 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2022/12/31-14:11:19.222 2e10 Level-0 table #7: started
+2022/12/31-14:11:19.224 2e10 Level-0 table #7: 1942 bytes OK
+2022/12/31-14:11:19.228 2e10 Delete type=0 #4
+2022/12/31-14:11:19.228 2e10 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2022/12/31-14:11:19.228 2e10 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x01\x0a\x00s\x00w\x00_\x00v\x00e\x00r\x00s\x00i\x00o\x00n' @ 113 : 1
+2022/12/31-14:11:19.228 2e10 Compacting 1@1 + 1@2 files
+2022/12/31-14:11:19.232 2e10 Generated table #8@1: 38 keys, 955 bytes
+2022/12/31-14:11:19.232 2e10 Compacted 1@1 + 1@2 files => 955 bytes
+2022/12/31-14:11:19.234 2e10 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/12/31-14:11:19.235 2e10 Delete type=2 #7
+2022/12/31-14:11:19.235 2e10 Delete type=2 #5
+2022/12/31-14:11:19.235 2e10 Manual compaction at level-1 from '\x00\x03\x01\x02\x01\x0a\x00s\x00w\x00_\x00v\x00e\x00r\x00s\x00i\x00o\x00n' @ 113 : 1 .. (end); will stop at (end)
