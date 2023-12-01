@@ -24,6 +24,7 @@ keymap.set("n", "<leader>cc", function()
     vim.cmd("echo ' Compilation successful'")
   else
     vim.cmd("echo ' Compilation failed'")
+    print(output)
   end
 end, {})
 -- keymap.set("n", "<leader>cc", "<cmd> lua compile() <CR>", {})

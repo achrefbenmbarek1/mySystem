@@ -86,6 +86,11 @@ local config = function()
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  lspconfig["ansiblels"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
 end
 
 return {

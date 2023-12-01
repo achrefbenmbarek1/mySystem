@@ -35,6 +35,7 @@ return {
         "prismals",
         "pyright",
         "jdtls",
+        "ansiblels",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -49,6 +50,7 @@ return {
         "black", -- python formatter
         "flake8", -- python linter
         "eslint_d", -- js linter
+        "ansible-lint",
       },
     })
   end,
