@@ -1,6 +1,6 @@
 return {
   "ThePrimeagen/harpoon",
-  lazy = false,
+  event = "VeryLazy",
   config = function()
     require("harpoon").setup({
       global_settings = {
@@ -14,7 +14,6 @@ return {
     keymap.set("n", "<leader>Hm", function()
       require("harpoon.ui").toggle_quick_menu()
     end, opts)
-
     opts.desc = "add file to menu"
     keymap.set("n", globalHarpoonLeader .. "a", function()
       require("harpoon.mark").add_file()
@@ -23,11 +22,10 @@ return {
     local numberOfFilesInHarpoon = #keysThatMapsToAHarpoonBuffer
     for i = 1, numberOfFilesInHarpoon, 1 do
       opts.desc = "go to file " .. i
-      keymap.set("<leader>H" .. keysThatMapsToAHarpoonBuffer[i], function()
+      keymap.set("n","<leader>H" .. keysThatMapsToAHarpoonBuffer[i], function()
         require("harpoon.ui").nav_file(i)
       end, opts)
     end
-
     opts.desc = "next"
     keymap.set("n", globalHarpoonLeader .. "n", function()
       require("harpoon.ui").nav_next()

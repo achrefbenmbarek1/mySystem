@@ -967,6 +967,9 @@
   <resource identifier="gimp-gradient-fg-transparent" checksum="1491f74caf057a39c8193470da2d2a29">
   </resource>
 
+  <resource identifier="gimp-gradient-fg-transparent-hardedge" checksum="34dca90c80cbb5d91a2d07a0e2cfba84">
+  </resource>
+
   <resource identifier="${gimp_data_dir}/gradients/Abstract_1.ggr" checksum="edaa7d1fc882ab813b75b49ee9272913">
   </resource>
 
@@ -1363,6 +1366,24 @@
   <resource identifier="Adobe Utopia Medium Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Andale Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="Arial" checksum="(null)">
+  </resource>
+
+  <resource identifier="Arial Black," checksum="(null)">
+  </resource>
+
+  <resource identifier="Arial Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Arial Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Arial Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="B&amp;H Lucida Bold" checksum="(null)">
   </resource>
 
@@ -1435,6 +1456,24 @@
   <resource identifier="Cantarell Ultra-Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="Comic Sans MS" checksum="(null)">
+  </resource>
+
+  <resource identifier="Comic Sans MS Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Courier New" checksum="(null)">
+  </resource>
+
+  <resource identifier="Courier New Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Courier New Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Courier New Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="D050000L" checksum="(null)">
   </resource>
 
@@ -1442,6 +1481,72 @@
   </resource>
 
   <resource identifier="DEC Terminal Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Math TeX Gyre" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Bold Oblique Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Mono Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Mono Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Oblique Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Serif" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Serif Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Serif Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Serif Bold Italic Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Serif Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Serif Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Serif Italic Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Serif Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="feather" checksum="(null)">
@@ -1483,7 +1588,58 @@
   <resource identifier="FreeSerif Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Georgia" checksum="(null)">
+  </resource>
+
+  <resource identifier="Georgia Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Georgia Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Georgia Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Grape Nuts" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Mono Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Propo" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Propo Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Propo Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Propo Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Impact Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka" checksum="(null)">
@@ -2077,6 +2233,9 @@
   <resource identifier="Nimbus Sans Narrow Semi-Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Color Emoji" checksum="(null)">
+  </resource>
+
   <resource identifier="P052" checksum="(null)">
   </resource>
 
@@ -2155,55 +2314,79 @@
   <resource identifier="Source Code Pro Ultra-Light Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable" checksum="(null)">
+  <resource identifier="SourceCodeVF" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable" checksum="(null)">
+  <resource identifier="SourceCodeVF" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Bold" checksum="(null)">
+  <resource identifier="SourceCodeVF Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Bold Italic" checksum="(null)">
+  <resource identifier="SourceCodeVF Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Heavy" checksum="(null)">
+  <resource identifier="SourceCodeVF Heavy" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Heavy Italic" checksum="(null)">
+  <resource identifier="SourceCodeVF Heavy Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Italic" checksum="(null)">
+  <resource identifier="SourceCodeVF Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Italic" checksum="(null)">
+  <resource identifier="SourceCodeVF Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Light" checksum="(null)">
+  <resource identifier="SourceCodeVF Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Light Italic" checksum="(null)">
+  <resource identifier="SourceCodeVF Light Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Medium" checksum="(null)">
+  <resource identifier="SourceCodeVF Medium" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Medium Italic" checksum="(null)">
+  <resource identifier="SourceCodeVF Medium Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Semi-Bold" checksum="(null)">
+  <resource identifier="SourceCodeVF Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Semi-Bold Italic" checksum="(null)">
+  <resource identifier="SourceCodeVF Semi-Bold Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Ultra-Light" checksum="(null)">
+  <resource identifier="SourceCodeVF Ultra-Light" checksum="(null)">
   </resource>
 
-  <resource identifier="Source Code Variable Ultra-Light Italic" checksum="(null)">
+  <resource identifier="SourceCodeVF Ultra-Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Standard Symbols PS" checksum="(null)">
+  </resource>
+
+  <resource identifier="Times New Roman," checksum="(null)">
+  </resource>
+
+  <resource identifier="Times New Roman, Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Times New Roman, Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Times New Roman, Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Trebuchet MS" checksum="(null)">
+  </resource>
+
+  <resource identifier="Trebuchet MS Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Trebuchet MS Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Trebuchet MS Italic" checksum="(null)">
   </resource>
 
   <resource identifier="URW Bookman Light" checksum="(null)">
@@ -2228,6 +2411,21 @@
   </resource>
 
   <resource identifier="URW Gothic Semi-Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Verdana" checksum="(null)">
+  </resource>
+
+  <resource identifier="Verdana Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Verdana Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Verdana Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Webdings" checksum="(null)">
   </resource>
 
   <resource identifier="Z003 Medium Italic" checksum="(null)">

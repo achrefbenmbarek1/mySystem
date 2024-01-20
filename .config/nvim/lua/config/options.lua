@@ -13,9 +13,13 @@ opt.smartcase = true
 opt.hlsearch = true
 
 opt.relativenumber = true
+opt.number = true
 opt.termguicolors = true
-opt.colorcolumn = "" -- a colomn to remind of the length of the code in one line give it a number between two quotes and it will create a colomn in a position that is dependent on the number
-opt.signcolumn = "yes:1"
+-- a colomn to remind of the length of the code in one line
+-- give it a number between two quotes and it will create a colomn in a position that is dependent on the number
+opt.colorcolumn = ""
+-- opt.signcolumn = "yes:1"
+opt.signcolumn = "number"
 opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect" --for autocompletion
@@ -34,3 +38,4 @@ opt.iskeyword:append("-") -- will consider strings that are separated by - as on
 opt.mouse = ""
 opt.modifiable = true
 opt.encoding = "UTF-8"
+opt.virtualedit = "block"

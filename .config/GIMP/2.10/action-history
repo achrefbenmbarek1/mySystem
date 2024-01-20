@@ -1,6 +1,6 @@
 # GIMP action-history
 
-(history-item "tools-ink" 0)
 (history-item "file-quit" 1)
+(history-item "tools-ink" 1)
 
 # end of action-history

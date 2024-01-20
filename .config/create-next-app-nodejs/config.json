@@ -3,6 +3,6 @@
 		"typescript": false,
 		"eslint": false,
 		"tailwind": false,
-		"srcDir": false
+		"srcDir": true
 	}
 }
