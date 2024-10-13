@@ -1,3 +1,6 @@
-2023/10/07-10:08:56.081 d147 Reusing MANIFEST /home/achref/.config/Vieb/Partitions/main/Local Storage/leveldb/MANIFEST-000001
-2023/10/07-10:08:56.081 d147 Recovering log #8
-2023/10/07-10:08:56.081 d147 Reusing old log /home/achref/.config/Vieb/Partitions/main/Local Storage/leveldb/000008.log 
+2024/04/08-15:14:53.105 637 Reusing MANIFEST /home/achref/.config/Vieb/Partitions/main/Local Storage/leveldb/MANIFEST-000001
+2024/04/08-15:14:53.105 637 Recovering log #8
+2024/04/08-15:14:53.108 637 Reusing old log /home/achref/.config/Vieb/Partitions/main/Local Storage/leveldb/000008.log 
+2024/04/08-16:01:58.022 638 Level-0 table #11: started
+2024/04/08-16:01:58.036 638 Level-0 table #11: 22805 bytes OK
+2024/04/08-16:01:58.052 638 Delete type=0 #8

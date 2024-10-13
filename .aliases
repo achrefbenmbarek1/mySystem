@@ -2,7 +2,7 @@ alias clearn="clear;neofetch"
 alias cl="clear"
 alias mv='mv -i'
 alias rm='rm -i'
-alias e='exa --git --icons --sort=created'
+alias e='eza --git --icons --sort=created'
 alias open='xdg-open'
 alias ..='cd ..'
 alias startXampp='sudo /opt/lampp/lampp start'

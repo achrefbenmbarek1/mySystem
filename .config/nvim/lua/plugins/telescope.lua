@@ -1,7 +1,7 @@
 local keymap = vim.keymap
 local config = function()
-  local telescope = require('telescope')
-  local actions = require('telescope.actions')
+  local telescope = require("telescope")
+  local actions = require("telescope.actions")
   telescope.setup({
     defaults = {
       vimgrep_arguments = {
@@ -46,17 +46,36 @@ local config = function()
       file_previewer = require("telescope.previewers").vim_buffer_cat.new,
       grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
       qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+      pickers = {
+        find_files = {
+          hidden = true,
+          -- needed to exclude some files & dirs from general search
+          -- when not included or specified in .gitignore
+          find_command = {
+            "rg",
+            "--files",
+            "--hidden",
+            "--glob=!**/.git/*",
+            "--glob=!**/.idea/*",
+            "--glob=!**/.vscode/*",
+            "--glob=!**/build/*",
+            "--glob=!**/dist/*",
+            "--glob=!**/yarn.lock",
+            "--glob=!**/package-lock.json",
+          },
+        },
+      },
       -- Developer configurations: Not meant for general override
       buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
       mappings = {
         i = {
           ["<C-j>"] = actions.move_selection_next,
           ["<C-k>"] = actions.move_selection_previous,
-          ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist
+          ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
         },
         n = {
           ["q"] = "close",
-        }
+        },
       },
     },
 
@@ -66,30 +85,29 @@ local config = function()
 end
 
 return {
-    'nvim-telescope/telescope.nvim', 
-      tag = '0.1.4',
-      event = "VeryLazy",
-      dependencies = { 
-    'nvim-lua/plenary.nvim',
+  "nvim-telescope/telescope.nvim",
+  tag = "0.1.4",
+  event = "VeryLazy",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
     {
       "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make"
+      build = "make",
     },
   },
-      config = config,
-      keys = {
-            keymap.set("n","<leader>ff",  "<cmd> Telescope find_files <CR>" ),
-            keymap.set("n","<leader>fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>" ),
-            keymap.set("n","<leader>fg", "<cmd> Telescope live_grep <CR>" ),
-            keymap.set("n","<leader>fb", "<cmd> Telescope buffers <CR>" ),
-            keymap.set("n","<leader>fh", "<cmd> Telescope help_tags <CR>" ),
-            keymap.set("n","<leader>fo", "<cmd> Telescope oldfiles <CR>" ),
-            keymap.set("n","<leader>fz", "<cmd> Telescope current_buffer_fuzzy_find <CR>" ),
-            keymap.set("n","<leader>fgc", "<cmd> Telescope git_commits <CR>" ),
-            keymap.set("n","<leader>fgs", "<cmd> Telescope git_status <CR>" ),
-            keymap.set("n","<leader>fth", "<cmd> Telescope themes <CR>" ),
-            keymap.set("n","<leader>ftm", "<cmd> Telescope marks <CR>" ),
-            --keymap.set("n","<leader>ftp",  "<cmd> lua require'telescope'.extensions.project.project{} <CR>"),
-
-      }
-    }
+  config = config,
+  keys = {
+    keymap.set("n", "<leader>ff", "<cmd> Telescope find_files <CR>"),
+    keymap.set("n", "<leader>fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>"),
+    keymap.set("n", "<leader>fg", "<cmd> Telescope live_grep <CR>"),
+    keymap.set("n", "<leader>fb", "<cmd> Telescope buffers <CR>"),
+    keymap.set("n", "<leader>fh", "<cmd> Telescope help_tags <CR>"),
+    keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>"),
+    keymap.set("n", "<leader>fz", "<cmd> Telescope current_buffer_fuzzy_find <CR>"),
+    keymap.set("n", "<leader>fgc", "<cmd> Telescope git_commits <CR>"),
+    keymap.set("n", "<leader>fgs", "<cmd> Telescope git_status <CR>"),
+    keymap.set("n", "<leader>fth", "<cmd> Telescope themes <CR>"),
+    keymap.set("n", "<leader>ftm", "<cmd> Telescope marks <CR>"),
+    --keymap.set("n","<leader>ftp",  "<cmd> lua require'telescope'.extensions.project.project{} <CR>"),
+  },
+}

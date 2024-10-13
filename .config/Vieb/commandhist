@@ -35,3 +35,7 @@ colorscheme catpuccin
 mkv
 mkviebrc
 mkv full
+nvim
+!nvim
+vimcommand
+set vimcommand="kitty -e nvim"

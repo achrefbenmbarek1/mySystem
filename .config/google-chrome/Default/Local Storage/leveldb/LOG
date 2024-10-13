@@ -1,3 +1,30 @@
-2023/10/12-17:34:26.806 3 Reusing MANIFEST /home/achref/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
-2023/10/12-17:34:26.810 3 Recovering log #53
-2023/10/12-17:34:26.812 3 Reusing old log /home/achref/.config/google-chrome/Default/Local Storage/leveldb/000053.log 
+2024/07/24-11:12:26.489 3 Reusing MANIFEST /home/achref/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2024/07/24-11:12:26.496 3 Recovering log #82
+2024/07/24-11:12:26.500 3 Reusing old log /home/achref/.config/google-chrome/Default/Local Storage/leveldb/000082.log 
+2024/07/24-11:13:00.880 4 Level-0 table #86: started
+2024/07/24-11:13:00.889 4 Level-0 table #86: 25100 bytes OK
+2024/07/24-11:13:00.900 4 Delete type=0 #82
+2024/07/24-11:13:55.699 4 Level-0 table #88: started
+2024/07/24-11:13:55.706 4 Level-0 table #88: 56603 bytes OK
+2024/07/24-11:13:55.709 4 Delete type=0 #85
+2024/07/24-11:19:14.287 4 Level-0 table #90: started
+2024/07/24-11:19:14.296 4 Level-0 table #90: 213098 bytes OK
+2024/07/24-11:19:14.302 4 Delete type=0 #87
+2024/07/24-11:19:14.303 4 Compacting 4@0 + 1@1 files
+2024/07/24-11:19:14.356 4 Generated table #91@0: 1112 keys, 1697033 bytes
+2024/07/24-11:19:14.356 4 Compacted 4@0 + 1@1 files => 1697033 bytes
+2024/07/24-11:19:14.359 4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/07/24-11:19:14.360 4 Delete type=2 #81
+2024/07/24-11:19:14.360 4 Delete type=2 #86
+2024/07/24-11:19:14.360 4 Delete type=2 #90
+2024/07/24-11:19:14.361 4 Delete type=2 #88
+2024/07/24-11:19:14.361 4 Delete type=2 #83
+2024/07/24-11:54:55.694 4 Level-0 table #93: started
+2024/07/24-11:54:55.700 4 Level-0 table #93: 74016 bytes OK
+2024/07/24-11:54:55.705 4 Delete type=0 #89
+2024/07/24-12:14:55.694 3 Level-0 table #95: started
+2024/07/24-12:14:55.698 3 Level-0 table #95: 35179 bytes OK
+2024/07/24-12:14:55.701 3 Delete type=0 #92
+2024/07/24-12:34:55.694 3 Level-0 table #97: started
+2024/07/24-12:34:55.699 3 Level-0 table #97: 56172 bytes OK
+2024/07/24-12:34:55.703 3 Delete type=0 #94

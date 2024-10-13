@@ -34,7 +34,7 @@ opt.backspace = "indent,eol,start"
 opt.splitright = true
 opt.splitbelow = true
 opt.autochdir = false
-opt.iskeyword:append("-") -- will consider strings that are separated by - as one word
+-- opt.iskeyword:append("-") -- will consider strings that are separated by - as one word
 opt.mouse = ""
 opt.modifiable = true
 opt.encoding = "UTF-8"

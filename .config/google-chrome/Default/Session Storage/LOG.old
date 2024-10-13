@@ -1,3 +1,6 @@
-2023/10/11-08:54:20.271 3 Reusing MANIFEST /home/achref/.config/google-chrome/Default/Session Storage/MANIFEST-000001
-2023/10/11-08:54:20.275 3 Recovering log #96
-2023/10/11-08:54:20.276 3 Reusing old log /home/achref/.config/google-chrome/Default/Session Storage/000096.log 
+2024/07/23-11:26:39.273 3 Reusing MANIFEST /home/achref/.config/google-chrome/Default/Session Storage/MANIFEST-000001
+2024/07/23-11:26:39.273 3 Recovering log #96
+2024/07/23-11:26:39.274 3 Reusing old log /home/achref/.config/google-chrome/Default/Session Storage/000096.log 
+2024/07/23-11:58:56.453 3 Level-0 table #100: started
+2024/07/23-11:58:56.459 3 Level-0 table #100: 21979 bytes OK
+2024/07/23-11:58:56.471 3 Delete type=0 #96

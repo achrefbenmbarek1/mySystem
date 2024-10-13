@@ -58,6 +58,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
+#
+# Disable substring matching
+zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=*'
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -81,15 +84,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  bundler
-  dotenv
-  # macos
-  rake
-  rbenv
-  ruby
-  zsh-autosuggestions
-  web-search
+ pass
+ git 
+ zsh-autosuggestions
+ zsh-syntax-highlighting
+ fast-syntax-highlighting
+ zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -121,7 +121,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #aliases
-source $HOME/.aliases.sh
+source $HOME/.aliases
 
 #vi mode in terminal
 bindkey -v
@@ -133,7 +133,12 @@ function vi-yank-xclip {
 
 }
 
-zle -N vi-yank-xclip
+function vi-yank-wlclip {
+    zle vi-yank
+    echo "$CUTBUFFER" | wl-copy
+}
+
+zle -N vi-yank-wlclip
 bindkey -M vicmd 'y' vi-yank-xclip
 
 custom_jj_key() {
@@ -154,8 +159,8 @@ zle -N historyFzf
 
 
 #fzf
-   source /usr/share/fzf/key-bindings.zsh
-   source /usr/share/fzf/completion.zsh
+   # source /usr/share/fzf/key-bindings.zsh
+   # source /usr/share/fzf/completion.zsh
 bindkey -v
 #export KEYTIMEOUT=1
 bindkey -M vicmd " f" fzf-history-widget
@@ -172,7 +177,8 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 
 #syntax-highlighting
-source /home/achref/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/achref/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 #neofetch
 # if [ -z "$TMUX" ]; then
 # echo -e "\n\n" ; 
@@ -192,9 +198,57 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PYTHONPATH=$PYTHONPATH:/home/achref/Document/projects/sideProjects/pdfScrapping:/home/achref/Document/projects/sideProjects/inventoryMatcher:/home/achref/Document/projects/sideProjects/inventoryMatcher/src
+export PYTHONPATH=$PYTHONPATH:/home/achref/Document/projects/sideProjects/pdfScrapping:/home/achref/Document/projects/sideProjects/majdi:/home/achref/Document/projects/sideProjects/inventoryMatcher:/home/achref/Document/projects/sideProjects/inventoryMatcher/src
+
+#dotnet autocompletion
+_dotnet_zsh_complete()
+{
+  local completions=("$(dotnet complete "$words")")
+
+  # If the completion list is empty, just continue with filename selection
+  if [ -z "$completions" ]
+  then
+    _arguments '*::arguments: _normal'
+    return
+  fi
+
+  # This is not a variable assignment, don't remove spaces!
+  _values = "${(ps:\n:)completions}"
+}
+
+compdef _dotnet_zsh_complete dotnet
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+
+
+# Load Angular CLI autocompletion.
+if [ -n "$(command -v ng)" ];then
+  source <(ng completion script)
+fi
+
+# . "$HOME/.atuin/bin/env"
+# 
+if type lf &> /dev/null; then
+    # Set up icons
+    LF_ICONS=$(sed $HOME/.config/lf/icons \
+                -e '/^[ \t]*#/d'         \
+                -e '/^[ \t]*$/d'         \
+                -e 's/[ \t]\+/=/g'       \
+                -e 's/$/ /')
+    LF_ICONS=${LF_ICONS//$'\n'/:}
+    export LF_ICONS
+
+    # Set up lfcd
+    LFCD="$HOME/.config/lf/scripts/lfcd.sh"
+    if [ -f "$LFCD" ]; then
+        source "$LFCD"
+        bindkey -s "^o" "lfcd\n"  # set up key-binding for zsh
+        # bind '"\C-o":"lfcd\C-m"'  # set up key-binding for bash
+        alias lf=lfcd  # overwrite lf with lfcd
+    fi
+fi
+eval "$(atuin init zsh)"
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive

@@ -9,7 +9,6 @@ local config = function()
     ensure_installed = {
       "vim",
       "lua",
-      "html",
       "css",
       "javascript",
       "typescript",
@@ -22,7 +21,7 @@ local config = function()
       "dockerfile",
       "python"
     },
-    auto_install = true,
+    auto_install = false,
     highlight = {
       enable = true,
       additional_vim_regex_highlighting = true,
@@ -33,6 +32,7 @@ end
 return {
   "nvim-treesitter/nvim-treesitter",
   lazy = false,
-  config = config
+  config = config,
+  version= "nil"
 }
 

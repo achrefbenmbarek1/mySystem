@@ -1,11 +1,22 @@
 return {
   "ThePrimeagen/harpoon",
   event = "VeryLazy",
+  dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     require("harpoon").setup({
       global_settings = {
         enter_on_sendcmd = true,
       },
+      projects = {
+    ["$HOME/Document/projects/axeFinance/PublisherService/"] = {
+        term = {
+            cmds = {
+                "dotnet watch",
+              "dotnet watch"
+            }
+        }
+    }
+}
     })
     local opts = { nowait = true }
     local keymap = vim.keymap
@@ -40,7 +51,7 @@ return {
     end, opts)
     opts.desc = "go to frontend terminal"
     keymap.set("n", globalHarpoonLeader .. "gtf", function()
-      require("harpoon.ui").gotoTerminal(2)
+      require("harpoon.tmux").gotoTerminal(2)
     end, opts)
     opts.desc = "send start server command to backend terminal"
     keymap.set("n", globalHarpoonLeader .. "sb", function()

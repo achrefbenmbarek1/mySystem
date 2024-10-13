@@ -1,6 +1,4 @@
-2023/10/07-06:55:10.344 a2be Reusing MANIFEST /home/achref/.config/Vieb/Partitions/main/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/10/07-06:55:10.344 a2be Recovering log #43
-2023/10/07-06:55:10.348 a2be Reusing old log /home/achref/.config/Vieb/Partitions/main/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000043.log 
-2023/10/07-07:06:35.892 a2c0 Level-0 table #48: started
-2023/10/07-07:06:35.904 a2c0 Level-0 table #48: 1760454 bytes OK
-2023/10/07-07:06:35.907 a2c0 Delete type=0 #43
+2024/04/09-12:03:40.614 f7ea Reusing MANIFEST /home/achref/.config/Vieb/Partitions/main/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/04/09-12:03:40.614 f7ea Recovering log #70
+2024/04/09-12:03:40.616 f7ea Reusing old log /home/achref/.config/Vieb/Partitions/main/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000070.log 
+2024/04/09-12:03:40.616 f7ea Delete type=2 #69

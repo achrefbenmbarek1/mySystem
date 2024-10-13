@@ -10,11 +10,14 @@ return {
     dap.listeners.after.event_initialized["dapui_config"] = function()
       dapui.open()
     end
-    dapui.listeners.before.event_terminated["dapui_config"] = function()
+    dap.listeners.before.event_terminated["dapui_config"] = function()
       dapui.close()
     end
-    dapui.listeners.before.event_exited["dapui_config"] = function()
+    dap.listeners.before.event_exited["dapui_config"] = function()
       dapui.close()
     end
+    vim.keymap.set("n", "<leader>dt", "<cmd>lua require('dapui').toggle()<CR>")
+    vim.keymap.set("n", "<leader>do", "<cmd>lua require('dapui').open()<CR>")
+    vim.keymap.set("n", "<leader>dc", "<cmd>lua require('dapui').close()<CR>")
   end,
 }

@@ -120,7 +120,7 @@ configuration {
 	kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";
 	kb-remove-to-eol: "Control+k";
 	kb-remove-to-sol: "Control+u";
-	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
+	kb-accept-entry: "Control+m,Return,KP_Enter";
 	kb-accept-custom: "Control+Return";
 	kb-accept-custom-alt: "Control+Shift+Return";
 	kb-accept-alt: "Shift+Return";
@@ -130,7 +130,7 @@ configuration {
 	kb-mode-complete: "Control+l";
 	kb-row-left: "Alt+h";
 	kb-row-right: "Alt+l";
-	kb-row-down: "Alt+j,Control+n";
+	kb-row-down: "Alt+j,Control+n,Control+j,";
 	kb-page-prev: "Page_Up";
 	kb-page-next: "Page_Down";
 	kb-row-first: "Home,KP_Home";

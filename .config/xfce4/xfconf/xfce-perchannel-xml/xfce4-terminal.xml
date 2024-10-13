@@ -29,7 +29,7 @@
   <property name="misc-slim-tabs" type="bool" value="false"/>
   <property name="misc-new-tab-adjacent" type="bool" value="false"/>
   <property name="misc-search-dialog-opacity" type="uint" value="100"/>
-  <property name="misc-show-unsafe-paste-dialog" type="bool" value="true"/>
+  <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
   <property name="misc-right-click-action" type="string" value="TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU"/>
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>
 </channel>

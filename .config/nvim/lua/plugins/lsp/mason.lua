@@ -24,33 +24,34 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
-        "tsserver",
-        "html",
-        "cssls",
-        "tailwindcss",
-        "svelte",
-        "lua_ls",
-        "graphql",
-        "emmet_ls",
-        "prismals",
-        "pyright",
-        "jdtls",
-        "ansiblels",
+        -- "tsserver",
+        -- "html",
+        -- "cssls",
+        -- "tailwindcss",
+        -- "svelte",
+        -- "lua_ls",
+        -- "graphql",
+        -- "emmet_ls",
+        -- "prismals",
+        -- "pyright",
+        -- "jdtls",
+        -- "ansiblels",
+        -- "omnisharp",
       },
       -- auto-install configured servers (with lspconfig)
-      automatic_installation = true, -- not the same as ensure_installed
+      automatic_installation = false, -- not the same as ensure_installed
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "luacheck",
-        "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "isort", -- python formatter
-        "black", -- python formatter
-        "flake8", -- python linter
-        "eslint_d", -- js linter
-        "ansible-lint",
+        -- "luacheck",
+        -- "prettier", -- prettier formatter
+        -- "stylua", -- lua formatter
+        -- "isort", -- python formatter
+        -- "black", -- python formatter
+        -- "flake8", -- python linter
+        -- "eslint_d", -- js linter
+        -- "ansible-lint",
       },
     })
   end,

@@ -1,3 +1,6 @@
-2023/10/07-10:31:07.245 d147 Reusing MANIFEST /home/achref/.config/Vieb/Partitions/main/Session Storage/MANIFEST-000001
-2023/10/07-10:31:07.245 d147 Recovering log #3
-2023/10/07-10:31:07.245 d147 Reusing old log /home/achref/.config/Vieb/Partitions/main/Session Storage/000003.log 
+2024/04/08-15:14:55.631 637 Reusing MANIFEST /home/achref/.config/Vieb/Partitions/main/Session Storage/MANIFEST-000001
+2024/04/08-15:14:55.631 637 Recovering log #3
+2024/04/08-15:14:55.634 637 Reusing old log /home/achref/.config/Vieb/Partitions/main/Session Storage/000003.log 
+2024/04/08-16:19:40.753 637 Level-0 table #5: started
+2024/04/08-16:19:40.766 637 Level-0 table #5: 20520 bytes OK
+2024/04/08-16:19:40.782 637 Delete type=0 #3

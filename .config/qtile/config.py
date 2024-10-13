@@ -24,16 +24,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from libqtile import bar, layout, widget,hook
+import os
+
+from libqtile import bar, hook, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
-import os
 
 mod = "mod4"
 terminal = guess_terminal()
 # terminal = 'kitty'
 
+tmux_sessions_keybindings=["ampersand","eacute","quotedbl","apostrophe","parenleft","minus","egrave","underscore","ccedilla","agrave"]
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -69,12 +71,20 @@ keys = [
     # Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(os.path.expanduser("kitty"))),
     Key([mod], "r", lazy.spawn(os.path.expanduser("~/.local/bashScripts/bookPicker.sh"))),
-    Key([mod], "c", lazy.spawn(os.path.expanduser("~/.local/bashScripts/bookmarkList.sh"))),
-    Key([mod, "shift"], "c", lazy.spawn(os.path.expanduser("~/.local/bashScripts/openAllBookMarks.sh"))),
+    Key([mod, "control"], "b", lazy.spawn(os.path.expanduser("~/.local/bashScripts/bookmarkList.sh"))),
+    Key([mod,"shift"], "b", lazy.spawn(os.path.expanduser("~/.local/bashScripts/openAllBookMarks.sh"))),
     Key([mod], "p", lazy.spawn(os.path.expanduser("passmenu"))),
-    Key([mod], "s", lazy.spawn(os.path.expanduser("kitty -e btop"))),
+    # Key([mod], "s", lazy.spawn(os.path.expanduser("kitty -e btop"))),
     Key([mod], "m", lazy.spawn(os.path.expanduser("~/.local/bashScripts/listManuals.sh"))),
-    Key([mod], "b", lazy.spawn(os.path.expanduser("firefox"))),
+    Key([mod], "s", lazy.spawn(os.path.expanduser("~/.local/bashScripts/myTmuxSessionizer.sh"))),
+    Key([mod, "control"], "k", lazy.spawn(os.path.expanduser("~/.local/bashScripts/killAllTmuxSessions.sh"))),
+    Key([mod, "control"], "s", lazy.spawn(os.path.expanduser("~/.local/bashScripts/interactWithBookmarkedTmuxSession.sh"))),
+    Key([mod,"shift"], "s", lazy.spawn(os.path.expanduser("~/.local/bashScripts/openAllBookMarkedTmuxSessions.sh"))),
+    Key([mod, "control"], "d", lazy.spawn(os.path.expanduser("~/.local/bashScripts/deAttachTmuxSession.sh"))),
+    Key([mod], "g", lazy.spawn(os.path.expanduser("~/.local/bashScripts/tmuxSessionJumper.sh"))),
+    Key([mod], "u", lazy.spawn(os.path.expanduser("~/.local/bashScripts/undoJumpingToTmuxSession.sh"))),
+    Key([mod, "shift"], "u", lazy.spawn(os.path.expanduser("~/.local/bashScripts/redoJumpingToTmuxSession.sh"))),
+    Key([mod], "b", lazy.spawn(os.path.expanduser("qutebrowser"))),
     Key([mod], "v", lazy.spawn(os.path.expanduser("kitty -e pulsemixer"))),
     # Key([mod,"shift"], "Return", lazy.spawn(os.path.expanduser("xfce4-terminal"))),
     Key([mod,"shift"], "Return", lazy.spawn(os.path.expanduser("st"))),
@@ -95,6 +105,11 @@ keys = [
     # Key([mod, "shift"], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
      Key([mod, "shift"], "r", lazy.spawn(os.path.expanduser("~/.local/bashScripts/ffmpegScreenRecording.sh")), desc="Spawn a command using a prompt widget"),
 ]
+
+for i in range(len(tmux_sessions_keybindings)):
+    key = Key([mod,"control"],tmux_sessions_keybindings[i],lazy.spawn(os.path.expanduser("~/.local/bashScripts/goToTmuxSessionHarpoonStyle.sh" + " " + str(i+1))))
+    keys.append(key)
+
 groups=[]
 group_name=["ampersand","eacute","quotedbl","apostrophe","parenleft","minus","egrave","underscore","ccedilla","agrave"]
 group_label=["browser","videos","coding","testing","databaseVisualization","servers","config","books","imageEditing","music"]
