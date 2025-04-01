@@ -98,8 +98,8 @@
      ".ncmpcpp".recursive = true;
      # ".local/bashScripts".source = ./bashScripts;
      # ".local/bashScripts".recursive = true;
-     ".oh-my-zsh".source = ./.oh-my-zsh;
-     ".oh-my-zsh".recursive = true;
+     # ".oh-my-zsh".source = ./.oh-my-zsh;
+     # ".oh-my-zsh".recursive = true;
      # "customFlake".source = ./customFlake;
      # "customFlake".recursive = true;
   };
