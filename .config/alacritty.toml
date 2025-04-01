@@ -1,0 +1,28 @@
+general.import = [
+  # uncomment the flavour you want below:
+  # "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  "~/.config/home-manager/alacritty/catppuccin-mocha.toml"
+]
+[font]
+size = 11.0
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "Iosevka Nerd Font Mono"
+style = "Medium"
+
+[font.italic]
+family = "Iosevka Nerd Font Mono"
+# If you prefer a slightly lighter italic variant, try "Thin Italic" (or use "Italic" if available)
+# style = "Thin Italic"
+style = "Italic"
+
+[font.bold_italic]
+family = "Iosevka Nerd Font Mono"
+style = "Medium Oblique"
+

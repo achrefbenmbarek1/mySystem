@@ -130,7 +130,6 @@ bindkey -M viins jk vi-cmd-mode
 function vi-yank-xclip {
     zle vi-yank
    echo "$CUTBUFFER" | xclip -i -selection clipboard
-
 }
 
 function vi-yank-wlclip {
@@ -139,7 +138,7 @@ function vi-yank-wlclip {
 }
 
 zle -N vi-yank-wlclip
-bindkey -M vicmd 'y' vi-yank-xclip
+bindkey -M vicmd 'y' vi-yank-wlclip
 
 custom_jj_key() {
   zle reset-prompt

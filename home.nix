@@ -35,6 +35,7 @@
     # '')
     zathura
     kitty
+    alacritty
     hyprland
     gparted
     atuin
@@ -97,8 +98,10 @@
      ".ncmpcpp".recursive = true;
      # ".local/bashScripts".source = ./bashScripts;
      # ".local/bashScripts".recursive = true;
-     "customFlake".source = ./customFlake;
-     "customFlake".recursive = true;
+     ".oh-my-zsh".source = ./.oh-my-zsh;
+     ".oh-my-zsh".recursive = true;
+     # "customFlake".source = ./customFlake;
+     # "customFlake".recursive = true;
   };
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a

@@ -53,7 +53,7 @@ local config = function()
   end
   local function capture_command_output(command)
     local handle = io.popen(command)
-    local result = handle:read("*a") -- Read all output
+    local result = handle:read("*a")
     handle:close()
     return result
   end
@@ -68,12 +68,42 @@ local config = function()
 
   local on_attach_for_omnisharp = function()
     on_attach()
-     opts = { noremap = true, silent = true }
-    local extended_omnisharp = require('omnisharp_extended')
+    opts = { noremap = true, silent = true }
+    local extended_omnisharp = require("omnisharp_extended")
     vim.keymap.set("n", "gR", extended_omnisharp.telescope_lsp_references(), opts)
     vim.keymap.set("n", "gd", extended_omnisharp.telescope_lsp_definition({ jump_type = "vsplit" }), opts)
     vim.keymap.set("n", "gD", extended_omnisharp.telescope_lsp_type_definition(), opts)
     vim.keymap.set("n", "gi", extended_omnisharp.telescope_lsp_implementation(), opts)
+  end
+
+  local on_attach_for_jdtls = function()
+    on_attach()
+    keymap.set("n", "<leader>li", "<Cmd>lua require'jdtls'.organize_imports()<CR>", { buffer = buffer, desc = "Organize Imports" })
+    keymap.set("n", "<leader>ltc", "<Cmd>lua require'jdtls'.test_class()<CR>", { buffer = buffer, desc = "Test Class" })
+    keymap.set(
+      "n",
+      "<leader>ltn",
+      "<Cmd>lua require'jdtls'.test_nearest_method()<CR>",
+      { buffer = buffer, desc = "Test Nearest Method" }
+    )
+    keymap.set(
+      "v",
+      "<leader>lev",
+      "<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>",
+      { buffer = buffer, desc = "Extract Variable" }
+    )
+    keymap.set(
+      "n",
+      "<leader>lev",
+      "<Cmd>lua require('jdtls').extract_variable()<CR>",
+      { buffer = buffer, desc = "Extract Variable" }
+    )
+    keymap.set(
+      "v",
+      "<leader>lem",
+      "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>",
+      { buffer = buffer, desc = "Extract Method" }
+    )
   end
   local capabilities = cmp_nvim_lsp.default_capabilities()
   -- local Omnisharp = "/home/achref/.nix-profile/lib/omnisharp-roslyn/OmniSharp.dll"
@@ -81,6 +111,7 @@ local config = function()
   Omnisharp = Omnisharp:gsub("%s+$", "") -- Remove trailing newline or whitespac
   Omnisharp = string.gsub(Omnisharp, "/bin/OmniSharp", "/lib/omnisharp-roslyn/OmniSharp.dll")
   -- local Omnisharp = "/home/achref/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"
+
   lspconfig["lua_ls"].setup({
     capabilities = capabilities,
 
@@ -111,6 +142,10 @@ local config = function()
     "--ngProbeLocations",
     project_library_path_ngserver,
   }
+  local configJava = {
+    cmd = { "jdtls" },
+    root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+  }
 
   lspconfig["tsserver"].setup({
     capabilities = capabilities,
@@ -128,7 +163,11 @@ local config = function()
 
   lspconfig["jdtls"].setup({
     capabilities = capabilities,
-    on_attach = on_attach,
+    on_attach = on_attach_for_jdtls,
+    on_new_config = function(new_config, new_root_dir)
+      new_config.cmd = configJava.cmd
+      new_config.root_dir = configJava.root_dir
+    end,
   })
 
   lspconfig["pyright"].setup({
@@ -154,12 +193,22 @@ local config = function()
     -- },
   })
 
+  lspconfig["gopls"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
+
   lspconfig["dockerls"].setup({
     capabilities = capabilities,
     on_attach = on_attach,
   })
 
   lspconfig["bashls"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
+
+  lspconfig["phpactor"].setup({
     capabilities = capabilities,
     on_attach = on_attach,
   })
@@ -177,6 +226,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
     "Hoffs/omnisharp-extended-lsp.nvim",
+    "mfussenegger/nvim-jdtls",
   },
   config = config,
 }
