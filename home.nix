@@ -69,6 +69,7 @@
     gnome-keyring
     xdg-utils
     ripgrep
+    gcc
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -85,17 +86,33 @@
     # '';
      #".config/hypr/hyprland.conf".source = ./hyprland.conf;
     # ".config/hypr/hyprland.conf".recursive = true;
+
      ".config".source = ./.config;
      ".config".recursive = true;
      "Pictures".source = ./Pictures;
      "Pictures".recursive = true;
-     ".tmux.conf".source = ./.tmux.conf;
-     ".tmux.conf".recursive = true;
-     ".zshrc".source = ./.zshrc;
-     ".zshenv".source = ./.zshenv;
-     ".aliases".source = ./.aliases;
-     ".ncmpcpp".source = ./.ncmpcpp;
-     ".ncmpcpp".recursive = true;
+     # ".tmux.conf".source = ./.tmux.conf;
+     # ".tmux.conf".recursive = true;
+     # ".zshrc".source = ./.zshrc;
+     # ".zshenv".source = ./.zshenv;
+     # ".aliases".source = ./.aliases;
+     # ".ncmpcpp".source = ./.ncmpcpp;
+     # ".ncmpcpp".recursive = true;
+
+    # ".config".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/home-manager";
+    # ".config".recursive = true;
+    # "images".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/Pictures";
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/hypr";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/nvim";
+    # "Pictures".recursive = true;
+    # ".tmux.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.tmux.conf";
+    ".zshrc".source   = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.zshrc";
+    ".zshenv".source  = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.zshenv";
+    ".aliases".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.aliases";
+    ".ncmpcpp".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.ncmpcpp";
+    ".tmux.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.tmux.conf";
+    # ".ncmpcpp".recursive = true;
+
      # ".local/bashScripts".source = ./bashScripts;
      # ".local/bashScripts".recursive = true;
      # ".oh-my-zsh".source = ./.oh-my-zsh;
