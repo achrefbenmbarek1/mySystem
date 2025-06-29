@@ -197,7 +197,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PYTHONPATH=$PYTHONPATH:/home/achref/Document/projects/sideProjects/pdfScrapping:/home/achref/Document/projects/sideProjects/majdi:/home/achref/Document/projects/sideProjects/inventoryMatcher:/home/achref/Document/projects/sideProjects/inventoryMatcher/src
+export PYTHONPATH=$PYTHONPATH:/home/achref/Document/calgra/crawler/report:/home/achref/Document/calgra/crawler/messagingLib:/home/achref/Document/calgra/crawler/topLevelUrlManagement:/home/achref/Document/projects/sideProjects/pdfScrapping:/home/achref/Document/projects/sideProjects/majdi:/home/achref/Document/projects/sideProjects/inventoryMatcher:/home/achref/Document/projects/sideProjects/inventoryMatcher/src
 
 #dotnet autocompletion
 _dotnet_zsh_complete()

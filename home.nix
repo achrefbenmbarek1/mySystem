@@ -87,8 +87,8 @@
      #".config/hypr/hyprland.conf".source = ./hyprland.conf;
     # ".config/hypr/hyprland.conf".recursive = true;
 
-     ".config".source = ./.config;
-     ".config".recursive = true;
+     ".config".source = config.lib.file.mkOutOfStoreSymlink "home/achref/.config/home-manager/.config";
+     # ".config".recursive = true;
      "Pictures".source = ./Pictures;
      "Pictures".recursive = true;
      # ".tmux.conf".source = ./.tmux.conf;
@@ -102,10 +102,15 @@
     # ".config".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/home-manager";
     # ".config".recursive = true;
     # "images".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/Pictures";
-    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/hypr";
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/nvim";
+    # ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/hypr";
+    # ".config/hypr".recursive = true;
+    # ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/nvim";
+    # ".config/nvim".recursive = true;
     # "Pictures".recursive = true;
     # ".tmux.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.tmux.conf";
+
+    "./hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/hypr";
+    "hypr".recursive = true;
     ".zshrc".source   = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.zshrc";
     ".zshenv".source  = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.zshenv";
     ".aliases".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.aliases";
@@ -138,6 +143,7 @@
   #
   home.sessionVariables = {
      EDITOR = "nvim";
+     HYPRLAND_CONFIG_DIR = "/home/achref/hypr";
   };
 
   # Let Home Manager install and manage itself.
@@ -213,10 +219,10 @@
     };
   };
   #for desktop apps interactions between each other(things such as screen sharing)
-  #xdg.portal.enable = true;
-  #xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+ #  xdg.portal.enable = true;
+ #  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
  # nix = {
-   # package = pkgs.nix;
-   # settings.experimental-features = ["nix-command" "flakes"];
-  #};
+ #   package = pkgs.nix;
+ #   settings.experimental-features = ["nix-command" "flakes"];
+ #  };
 }
