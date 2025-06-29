@@ -87,8 +87,8 @@
      #".config/hypr/hyprland.conf".source = ./hyprland.conf;
     # ".config/hypr/hyprland.conf".recursive = true;
 
-     ".config".source = config.lib.file.mkOutOfStoreSymlink "home/achref/.config/home-manager/.config";
-     # ".config".recursive = true;
+     # ".config/nvim".source = ./.config/nvim;
+     # ".config/nvim".recursive = true;
      "Pictures".source = ./Pictures;
      "Pictures".recursive = true;
      # ".tmux.conf".source = ./.tmux.conf;
@@ -102,15 +102,19 @@
     # ".config".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/home-manager";
     # ".config".recursive = true;
     # "images".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/Pictures";
-    # ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/hypr";
-    # ".config/hypr".recursive = true;
-    # ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/nvim";
-    # ".config/nvim".recursive = true;
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/hypr";
+    ".config/hypr".recursive = true;
+    # ".config/fontconfig".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/fontconfig";
+    # ".config/fontconfig".recursive = true;
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/nvim";
+    ".config/nvim".recursive = true;
+    ".config/lf".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/lf";
+    ".config/lf".recursive = true;
     # "Pictures".recursive = true;
     # ".tmux.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.tmux.conf";
 
-    "./hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/hypr";
-    "hypr".recursive = true;
+    # "hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/hypr";
+    # "hypr".recursive = true;
     ".zshrc".source   = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.zshrc";
     ".zshenv".source  = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.zshenv";
     ".aliases".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.aliases";
@@ -143,7 +147,7 @@
   #
   home.sessionVariables = {
      EDITOR = "nvim";
-     HYPRLAND_CONFIG_DIR = "/home/achref/hypr";
+     # HYPRLAND_CONFIG_DIR = "/home/achref/hypr";
   };
 
   # Let Home Manager install and manage itself.
@@ -169,7 +173,13 @@
   "video/*" = ["mpv.desktop"];
   };
 
-  fonts.fontconfig.enable = true;
+  # fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      monospace = ["Iosevka Nerd Font Mono"];
+    };
+  };
   # programs.zsh.enableCompletion = false;
   programs.firefox = {
     enable = true;
