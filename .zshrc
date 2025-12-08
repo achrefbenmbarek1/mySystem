@@ -197,7 +197,12 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PYTHONPATH=$PYTHONPATH:/home/achref/Document/calgra/crawler/report:/home/achref/Document/calgra/crawler/messagingLib:/home/achref/Document/calgra/crawler/topLevelUrlManagement:/home/achref/Document/projects/sideProjects/pdfScrapping:/home/achref/Document/projects/sideProjects/majdi:/home/achref/Document/projects/sideProjects/inventoryMatcher:/home/achref/Document/projects/sideProjects/inventoryMatcher/src
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+
+
+export PYTHONPATH=$PYTHONPATH:/home/achref/Document/kompera_crawler/topLevelUrlManagement/:/home/achref/Document/kompera_crawler/report:/home/achref/Document/kompera_crawler/sentimentAnalysis/:/home/achref/Document/kompera_crawler/topLevelDataSourcesCrawler/:/home/achref/Document/kompera_crawler/dataCategorizerClean/:/home/achref/Document/kompera_crawler/topLevelDataSourcesCrawler:/home/achref/Document/kompera_crawler/messagingLib/:/home/achref/Document/calgra/crawler/report:/home/achref/Document/calgra/crawler/messagingLib:/home/achref/Document/calgra/crawler/topLevelUrlManagement:/home/achref/Document/projects/sideProjects/pdfScrapping:/home/achref/Document/projects/sideProjects/majdi:/home/achref/Document/projects/sideProjects/inventoryMatcher:/home/achref/Document/projects/sideProjects/inventoryMatcher/src
 
 #dotnet autocompletion
 _dotnet_zsh_complete()
@@ -250,4 +255,6 @@ if type lf &> /dev/null; then
     fi
 fi
 eval "$(atuin init zsh)"
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+

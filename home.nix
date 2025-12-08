@@ -25,7 +25,7 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-     (pkgs.nerdfonts.override { fonts = [ "Hack" "Iosevka" ]; })
+     # (pkgs.nerdfonts.override { fonts = [ "Hack" "Iosevka" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -48,7 +48,8 @@
     dunst
     libnotify
     hyprpaper
-    rofi-wayland
+    hyprsunset
+    rofi
     fzf
     eza
     zoxide
@@ -70,6 +71,10 @@
     xdg-utils
     ripgrep
     gcc
+    nerd-fonts.hack
+    nerd-fonts.iosevka
+    ollama
+    # nixgl.nixGLIntel
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -104,12 +109,17 @@
     # "images".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/Pictures";
     ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/hypr";
     ".config/hypr".recursive = true;
+    ".config/alacritty.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/alacritty.toml";
+    
+
     # ".config/fontconfig".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/fontconfig";
     # ".config/fontconfig".recursive = true;
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/nvim";
     ".config/nvim".recursive = true;
     ".config/lf".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/lf";
     ".config/lf".recursive = true;
+    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.config/home-manager/.config/waybar";
+    ".config/waybar".recursive = true;
     # "Pictures".recursive = true;
     # ".tmux.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/achref/.tmux.conf";
 
@@ -173,7 +183,12 @@
   "video/*" = ["mpv.desktop"];
   };
 
-  # fonts.fontconfig.enable = true;
+
+# fonts.packages = [
+#      pkgs.nerd-fonts.hack
+#      pkgs.nerd-fonts.iosevka
+# ];
+
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
@@ -200,7 +215,9 @@
       };
       search.force = true;
 
-      bookmarks = [
+      bookmarks = {
+      force = true;
+      settings = [
         {
           name = "wikipedia";
           tags = [ "wiki" ];
@@ -208,6 +225,7 @@
           url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
         }
       ];
+      };
 
       settings = {
         # "dom.security.https_only_mode" = true;
@@ -220,7 +238,7 @@
         /* some css */                        
       '';                                      
 
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+      extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
         ublock-origin
         sponsorblock
         vimium

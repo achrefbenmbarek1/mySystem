@@ -217,6 +217,17 @@ local config = function()
     capabilities = capabilities,
     on_attach = on_attach,
   })
+
+  lspconfig["rust_analyzer"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
+
+  lspconfig["kotlin_language_server"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+  })
+
 end
 
 return {

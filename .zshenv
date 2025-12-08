@@ -13,8 +13,8 @@ export VISUAL=nvim
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk 
 
 #hack for gpu on vbox
-export GALLIUM_DRIVER=llvmpipe
-export LIBGL_ALWAYS_SOFTWARE=true
+# export GALLIUM_DRIVER=llvmpipe
+# export LIBGL_ALWAYS_SOFTWARE=true
 
 export LD_LIBRARY_PATH=-lstdc++
 

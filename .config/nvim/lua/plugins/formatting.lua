@@ -13,6 +13,7 @@ local config = function()
       lua = { "stylua" },
       python = { "isort", "black" },
       ansible = { "ansible-lint" },
+      rust = { "rustfmt", lsp_format = "fallback" },
     },
     -- format_on_save = {
     --   lsp_fallback = true,
