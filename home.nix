@@ -33,7 +33,11 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    samply
+    python313
     zathura
+    mold
+    zlib
     kitty
     alacritty
     hyprland
@@ -44,7 +48,8 @@
     ncmpcpp
     atuin
     waybar
-    pass
+    # pass
+    (pkgs.pass.withExtensions (exts: [ exts.pass-otp ]))
     dunst
     libnotify
     hyprpaper
@@ -74,6 +79,7 @@
     nerd-fonts.hack
     nerd-fonts.iosevka
     ollama
+    gh
     # nixgl.nixGLIntel
   ];
 

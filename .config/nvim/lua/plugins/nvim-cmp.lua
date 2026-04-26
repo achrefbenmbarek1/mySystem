@@ -5,7 +5,8 @@ local config = function()
   require("luasnip.loaders.from_vscode").lazy_load()
   cmp.setup({
     completion = {
-      completeopt = "menu, menuone, preview, noselect",
+      autocomplete = false,
+      -- completeopt = "menu, menuone, preview, noselect",
     },
     snippet = {
       expand = function(args)
@@ -17,13 +18,15 @@ local config = function()
       ["<C-j>"] = cmp.mapping.select_next_item(),
       ["<C-f>"] = cmp.mapping.scroll_docs(-4),
       ["<C-b>"] = cmp.mapping.scroll_docs(4),
-      ["<C-Space>"] = cmp.mapping.complete(),
+      ["<C-Space>"] = cmp.mapping.complete(     {
+      completeopt = "menu, menuone, preview, noselect",
+    }
+),
       ["<C-e>"] = cmp.mapping.abort(),
       ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
 
     sources = cmp.config.sources({
-      --{ name = 'nvim_lsp' },
       { name = "nvim_lsp" },
       { name = "luasnip" },
       { name = "buffer" },

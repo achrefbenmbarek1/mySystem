@@ -2,8 +2,9 @@
 # ~/.zshenv
 #
 
-LD_LIBRARY_PATH=/var/lib/snapd/snap/haruna/11/usr/lib/x86_64-linux-gnu/samba/libmsrpc3.so.0
-export LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/var/lib/snapd/snap/haruna/11/usr/lib/x86_64-linux-gnu/samba/libmsrpc3.so.0
+# export LD_LIBRARY_PATH=/usr/lib/libz.so.1
+# export LD_LIBRARY_PATH="/var/lib/snapd/snap/haruna/current/usr/lib/x86_64-linux-gnu:/usr/lib:$LD_LIBRARY_PATH"
 
 export PATH=/home/achref/.local/bin:/usr/bin:$(find $HOME/.config/home-manager/bashScripts -maxdepth 1 -type d  | paste -sd ":" -):/home/achref/.fnm:/usr/local/bin/gcc-arm-none-eabi-5_4-2016q3/bin:/home/achref/.local/share/lombok:/home/achref/.config/rofi/scripts:/home/achref/.local/share/lombok:/home/achref/.cargo/bin:/usr/lib/w3m:/usr/lib/jvm/java-17-openjdk:$ANDROID_HOME/cmdline-tools/latest/bin:/home/achref/Android/Sdk/tools/bin:/home/achref/.dotnet/tools:$PATH
 
@@ -16,7 +17,8 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 # export GALLIUM_DRIVER=llvmpipe
 # export LIBGL_ALWAYS_SOFTWARE=true
 
-export LD_LIBRARY_PATH=-lstdc++
+# export LD_LIBRARY_PATH=-lstdc++
+# export LD_LIBRARY_PATH=/usr/lib:/usr/lib64
 
 export XDG_CONFIG_HOME=/home/achref/.config/
 
